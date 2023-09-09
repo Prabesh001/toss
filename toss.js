@@ -32,6 +32,7 @@ function toss1(){
 
     showResult('You Lose!');
   }  
+  
 },10);
 }
 
@@ -57,4 +58,14 @@ function toss2(){
     showResult('You Win!');
   }  
 },10);
+
 }
+
+document.body.addEventListener('keydown',()=>{
+  if (event.key==='h' || event.key==='H'){
+    toss1();
+  } else if(event.key==='t' || event.key==='T'){
+    toss2();
+  }
+})
+
