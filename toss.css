@@ -5,11 +5,11 @@ body{
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  background-color: gold;
+  background-color: rgb(222,176,99);
   border: 3px solid black;
   position: absolute;
   top: 13%;
-  left: 21%;
+  left: 40%;
 }
 img{
   position: absolute;
@@ -20,25 +20,26 @@ img{
   border-radius: 50%;
 }
 .tossed{
-  transform: rotate3d(1, 1, 1, 36000deg);
+  transform: rotate3d(0, 1, 0, 36000deg);
   transition: all 2s ease;
   background-color: transparent;
   border: none;
+  animation: transform 2s;
 }
 .result{
   display: none;
   position: absolute;
   top: 45%;
-  left: 21%;
+  left: 40%;
   font-size: large;
   font-weight: bold;
 }
 
 .js-head{
-  left: 15%;
+  left: 25%;
 }
 .js-tail{
-  left: 30%;
+  left: 55%;
 }
 .js-head,.js-tail{
   position: absolute;
@@ -55,4 +56,18 @@ img{
   position: absolute;
   top: -3%;
   left: -3%;
+}
+.result+p{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: large;
+  font-weight: bold;
+  opacity: 0.2;
+}
+
+@keyframes transform{
+  from {filter: blur(5px);
+  scale: 0.8;}
+  to   {filter: blur(5px)} ;
 }
